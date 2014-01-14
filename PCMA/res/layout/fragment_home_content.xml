@@ -1,20 +1,55 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:textIsSelectable="true"
-    tools:context=".ContentFragment" >
+    android:background="#EEEEEE"
+    android:scrollbars="vertical"
+    tools:context=".ContentFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/announcements"
-            android:textSize="25sp" />
-    </LinearLayout>
-</LinearLayout>
+	    android:orientation="vertical"
+	    android:padding="16dp">
+	    <LinearLayout style="@style/Card">
+	        <TextView android:text="@string/announcements_title" style="@style/CardTitle" />
+	        <TextView
+	            style="@style/CardText"
+	            android:text="@string/announcements_content"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"/>
+	    </LinearLayout>
+	    <LinearLayout style="@style/Card">
+	        <TextView android:text="@string/schedule_title" style="@style/CardTitle" />
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="9:00 AM" style="@style/ScheduleLeft" />
+	            <TextView android:text="Arrival" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="10:00 AM" style="@style/ScheduleLeft" />
+	            <TextView android:text="Check-in" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="11:00 AM" style="@style/ScheduleLeft" />
+	            <TextView android:text="Presentation" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="12:00 PM" style="@style/ScheduleLeft" />
+	            <TextView android:text="Lunch" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	    </LinearLayout>
+	</LinearLayout>
+</ScrollView>

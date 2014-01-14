@@ -2,6 +2,7 @@
 <resources>
     <string name="app_name">PCMA</string>
     <string name="title_content_activity">PCMA</string>
-    <string name="announcements">Announcements</string>
-    
+    <string name="announcements_title">Announcement</string>
+    <string name="announcements_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porttitor rutrum lacus, sit amet suscipit enim adipiscing quis. Donec porta, lorem sed hendrerit congue, massa erat euismod lorem, vitae aliquam risus odio at justo. Praesent condimentum blandit nunc, ac eleifend quam ultrices eget.</string>
+	<string name="schedule_title">Schedule</string>
 </resources>
