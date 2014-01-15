@@ -18,8 +18,8 @@ public final class MenuItem
 	static
 	{
 		addItem(ItemID.HOME, "Home");
-		addItem(ItemID.CONNECT, "Connect");
 		addItem(ItemID.PROFILE, "Profile");
+		addItem(ItemID.CONNECT, "Connect");
 		addItem(ItemID.CHAT, "Chat");
 		addItem(ItemID.EVENTS, "Events");
 	}
