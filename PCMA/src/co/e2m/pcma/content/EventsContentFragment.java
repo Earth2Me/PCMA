@@ -7,17 +7,17 @@ import android.view.ViewGroup;
 import co.e2m.pcma.R;
 import co.e2m.pcma.menu.ItemID;
 
-public class ProfileContentFragment extends ContentFragment
+public class EventsContentFragment extends ContentFragment
 {
 	@Override
 	public ItemID getItemID()
 	{
-		return ItemID.PROFILE;
+		return ItemID.EVENTS;
 	}
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 	{
-		return inflater.inflate(R.layout.fragment_profile_content, container, false);
+		return inflater.inflate(R.layout.fragment_events_content, container, false);
 	}
 }

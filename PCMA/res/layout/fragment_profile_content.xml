@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/CardScroll">
+    <LinearLayout
+        style="@style/CardLayout"
+        android:orientation="vertical" >
+        <LinearLayout style="@style/Card">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+	            <ImageView
+	                android:layout_width="80dp"
+	                android:layout_height="80dp"
+	                android:layout_alignParentLeft="true"
+	                android:layout_alignParentTop="true"
+	                android:scaleType="fitCenter"
+	                android:src="@drawable/ic_action_person"
+	                android:id="@+id/profile_avatar" />
+	            <TextView 
+	                style="@style/CardTitle"
+	                android:text="Me Person"
+	                android:layout_alignParentTop="true"
+	                android:layout_toRightOf="@id/profile_avatar"
+	                android:id="@+id/profile_title"/>
+	            <TextView
+	                style="@style/CardText"
+	                android:layout_toRightOf="@id/profile_avatar"
+	                android:layout_below="@id/profile_title"
+	                android:layout_alignParentRight="true"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempor dui mi."/>
+	        </RelativeLayout>
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keywords"
+                android:textColor="#777777"
+                android:drawableLeft="@drawable/ic_action_new"/>
+	        <LinearLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:gravity="center_vertical">
+	            <TextView style="@style/Keyword" android:text="C#"/>
+	            <TextView style="@style/Keyword" android:text="mobile"/>
+	            <TextView style="@style/Keyword" android:text="web"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    <LinearLayout style="@style/Card">
+	        <TextView style="@style/CardTitle" android:text="My Events"/>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="1/19/2038" style="@style/ScheduleLeft" />
+	            <TextView android:text="Hackathon" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="1/20/2038" style="@style/ScheduleLeft" />
+	            <TextView android:text="Mobile Dev Convention" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	        <LinearLayout
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal">
+	            <TextView android:text="1/21/2038" style="@style/ScheduleLeft" />
+	            <TextView android:text="Big Conference" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	    </LinearLayout>
+    </LinearLayout>
+</ScrollView>

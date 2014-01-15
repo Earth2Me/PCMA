@@ -1,7 +1,10 @@
 package co.e2m.pcma;
 
 import co.e2m.pcma.content.ChatContentFragment;
+import co.e2m.pcma.content.ConnectContentFragment;
+import co.e2m.pcma.content.EventsContentFragment;
 import co.e2m.pcma.content.HomeContentFragment;
+import co.e2m.pcma.content.ProfileContentFragment;
 import co.e2m.pcma.menu.ItemID;
 import co.e2m.pcma.menu.MenuItem;
 import android.content.res.Configuration;
@@ -23,6 +26,51 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 	private ListView drawerList;
 	private DrawerLayout drawerLayout;
 	private ActionBarDrawerToggle drawerToggle;
+	
+	public void setScreen(ItemID screen)
+	{
+		if (screen == this.screen)
+		{
+			return;
+		}
+		
+		final Fragment fragment;
+		
+		switch (screen)
+		{
+		case CONNECT:
+			fragment = new ConnectContentFragment();
+			break;
+			
+		case PROFILE:
+			fragment = new ProfileContentFragment();
+			break;
+			
+		case CHAT:
+			fragment = new ChatContentFragment();
+			break;
+			
+		case EVENTS:
+			fragment = new EventsContentFragment();
+			break;
+			
+		case HOME:
+		default:
+			fragment = new HomeContentFragment();
+			break;
+		}
+		
+		getFragmentManager().beginTransaction().replace(R.id.content_placeholder, fragment).commit();
+		getActionBar().setTitle(screen.getMenuItem().getText());
+		
+		if (this.screen != null && this.screen != screen)
+		{
+			drawerList.setItemChecked(this.screen.getPosition(), false);
+		}
+		drawerList.setItemChecked(screen.getPosition(), true);
+		
+		this.screen = screen;
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -107,38 +155,5 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 	public ItemID getScreen()
 	{
 		return screen;
-	}
-	
-	public void setScreen(ItemID screen)
-	{
-		if (screen == this.screen)
-		{
-			return;
-		}
-		
-		final Fragment fragment;
-		
-		switch (screen)
-		{
-		case CHAT:
-			fragment = new ChatContentFragment();
-			break;
-			
-		case HOME:
-		default:
-			fragment = new HomeContentFragment();
-			break;
-		}
-		
-		getFragmentManager().beginTransaction().replace(R.id.content_placeholder, fragment).commit();
-		getActionBar().setTitle(screen.getMenuItem().getText());
-		
-		if (this.screen != null && this.screen != screen)
-		{
-			drawerList.setItemChecked(this.screen.getPosition(), false);
-		}
-		drawerList.setItemChecked(screen.getPosition(), true);
-		
-		this.screen = screen;
 	}
 }

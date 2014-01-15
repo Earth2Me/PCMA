@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/CardScroll">
+    <LinearLayout
+        style="@style/CardLayout"
+        android:orientation="vertical" >
+        <LinearLayout style="@style/Card">
+    		<TextView style="@style/CardTitle" android:text="Events" />
+    	</LinearLayout>
+    </LinearLayout>
+</ScrollView>
