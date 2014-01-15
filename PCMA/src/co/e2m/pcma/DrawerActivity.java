@@ -38,12 +38,12 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 		
 		switch (screen)
 		{
-		case CONNECT:
-			fragment = new ConnectContentFragment();
-			break;
-			
 		case PROFILE:
 			fragment = new ProfileContentFragment();
+			break;
+			
+		case CONNECT:
+			fragment = new ConnectContentFragment();
 			break;
 			
 		case CHAT:
@@ -117,6 +117,13 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 	}
 	
 	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		getMenuInflater().inflate(R.menu.menu_base, menu);
+		return true;
+	}
+	
+	@Override
 	public void onConfigurationChanged(Configuration newConfig)
 	{
 		super.onConfigurationChanged(newConfig);
@@ -132,11 +139,9 @@ public class DrawerActivity extends FragmentActivity implements AdapterView.OnIt
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu)
 	{
-		// If we had actionbar buttons:
-		/*
 		boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
-		menu.findItem(R.id._____).setVisible(!drawerOpen);
-		*/
+		menu.findItem(R.id.menu_social).setVisible(!drawerOpen);
+		
 		return super.onPrepareOptionsMenu(menu);
 	}
 
