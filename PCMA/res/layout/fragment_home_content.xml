@@ -1,4 +1,5 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home_root"
     android:layout_width="match_parent"
@@ -49,6 +50,41 @@
 	            android:orientation="horizontal">
 	            <TextView android:text="12:00 PM" style="@style/ScheduleLeft" />
 	            <TextView android:text="Lunch" style="@style/ScheduleRight" />
+	        </LinearLayout>
+	    </LinearLayout>
+	    <LinearLayout style="@style/Card">
+	        <TextView style="@style/CardTitle" android:text="Map" />
+	        <!-- These attributes are not erroneous; they're reported as such due to a build tools bug. https://code.google.com/p/android/issues/detail?id=53283 -->
+	        <FrameLayout
+	            android:id="@+id/map_placeholder"
+	            android:layout_width="fill_parent"
+	            android:layout_height="250dp" />
+	    </LinearLayout>
+	    <LinearLayout style="@style/Card">
+	        <TextView style="@style/CardTitle" android:text="Friend feed" />
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
+	        </LinearLayout>
+	        <LinearLayout style="@style/FeedItem">
+	            <ImageButton style="@style/FeedImage"/>
+	            <TextView style="@style/FeedText"/>
 	        </LinearLayout>
 	    </LinearLayout>
 	</LinearLayout>

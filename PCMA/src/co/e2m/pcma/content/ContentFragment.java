@@ -1,6 +1,7 @@
-package co.e2m.pcma;
+package co.e2m.pcma.content;
 
-import android.support.v4.app.Fragment;
+import co.e2m.pcma.menu.ItemID;
+import android.app.Fragment;
 
 
 public abstract class ContentFragment extends Fragment

@@ -1,6 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-
+    android:layout_height="match_parent" 
+    android:id="@+id/chat">
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/chat_text_area"
+	    android:layout_alignParentBottom="true"
+	    android:background="#FFFFFF">
+	    <ImageButton
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:gravity="center_vertical"
+	        android:id="@+id/chat_send"
+	        android:src="@drawable/ic_action_send_now"
+	        android:contentDescription="Send"
+	        style="?android:attr/borderlessButtonStyle"/>
+	    <EditText
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_toLeftOf="@id/chat_send"
+	        android:layout_marginTop="5sp"
+	        android:id="@+id/chat_input">
+	        <requestFocus/>
+	     </EditText>
+	</RelativeLayout>
+	<ScrollView
+	    android:id="@+id/chat_scroll"
+	    android:scrollbars="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#EEEEEE"
+	    android:layout_above="@id/chat_text_area"
+	    android:layout_alignParentTop="true">
+	    <LinearLayout
+	        android:gravity="top"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical">
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image0" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image0" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image1" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image1" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image11" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image11" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image12" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image12" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image2" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image2" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image3" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image3" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image4" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image4" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image5" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image5" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image6" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image6" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image7" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image7" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image8" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image8" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemOther">
+	            <ImageButton style="@style/ChatImageOther" android:id="@+id/image9" />
+	            <TextView style="@style/ChatTextOther" android:layout_toRightOf="@+id/image9" />
+	        </RelativeLayout>
+	        <RelativeLayout style="@style/ChatItemMe">
+	            <ImageButton style="@style/ChatImageMe" android:id="@+id/image10" />
+	            <TextView style="@style/ChatTextMe" android:layout_toLeftOf="@+id/image10" />
+	        </RelativeLayout>
+	    </LinearLayout>
+	</ScrollView>
 </RelativeLayout>
